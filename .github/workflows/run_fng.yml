@@ -1,0 +1,34 @@
+name: vIcmAr Fear & Greed Diario
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Se ejecuta todos los días a las 12:00 UTC
+  workflow_dispatch:      # Permite probarlo manualmente
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: |
+          pip install requests groq python-dotenv selenium webdriver-manager google-api-python-client google-auth-httplib2 google-auth-oauthlib tweepy
+
+      - name: Ejecutar Bot en Modo FNG
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SQUARE_API_KEY: ${{ secrets.SQUARE_API_KEY }}
+          MODO_PRUEBA: 'False'
+          GROQ_MODEL_NAME: "llama-3.3-70b-versatile"
+          TIPO_BOT: "FNG"  # 👈 Esto activa el nuevo modo en main.py
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          ID_TELEGRAM: ${{ secrets.ID_TELEGRAM }}
+          ID_TELEGRAM_ADMIN: ${{ secrets.ID_TELEGRAM_ADMIN }}
+        run: python main.py
