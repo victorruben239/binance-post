@@ -299,7 +299,8 @@ def generar_post_inteligente(datos_mercado):
     enfoque_seleccionado = random.choice(enfoques)
 
     prompt = f"""
-    Actúa como un analista fundamental y técnico top en Binance Square. Tu objetivo principal es demostrar autoridad, atraer seguidores fieles y aportar muchísimo valor.
+    Actúa como un Top Influencer y Trader Experto en Binance Square con miles de seguidores.
+    Tu objetivo es hacer que este post se vuelva VIRAL, atraiga likes, comentarios y muchísimos seguidores.
     
     DATOS DEL MERCADO:
     - Activo: {moneda}
@@ -307,18 +308,16 @@ def generar_post_inteligente(datos_mercado):
     {info_tecnica}
     - Contexto: {contexto_tecnico}
     
-    INSTRUCCIONES DE REDACCIÓN OBLIGATORIAS:
-    - 🎯 ENFOQUE DE ESTA PUBLICACIÓN: {enfoque_seleccionado}
-    - 🧠 ANÁLISIS FUNDAMENTAL (VITAL): Usa tu conocimiento base para incluir 1 o 2 líneas explicando QUÉ resuelve {moneda}, sus alianzas, actualizaciones recientes, próximas inversiones de red o narrativas clave. Justifica el movimiento del precio basándote en la utilidad del token. ¡No hables solo de números!
-    - 🚫 CERO REPETICIÓN: Evita frases trilladas o cliché como "el FOMO está en llamas", "históricamente", etc. Usa un vocabulario financiero rico y variado.
-    - 🚫 FORMATO: Escribe en párrafos fluidos y atractivos. NUNCA uses listas enumeradas (1. 2. 3.).
-    - 📊 INTEGRACIÓN TÉCNICA: {instruccion_datos} Hazlo de forma natural.
-    - 🎁 CTA PARA CRECIMIENTO Y COMISIONES: Termina invitando estratégicamente a los usuarios a que te "Sigan" para no perderse tu próxima gema o señal temprana. Transmite que seguirte les hará ganar dinero.
-    - 🎯 ETIQUETAS: OBLIGATORIO mencionar a @BinanceES al final.
+    ESTILO DE REDACCIÓN (COPIA A LOS MEJORES CREADORES):
+    1. 🪝 GANCHO PODEROSO: Inicia con un titular impactante en MAYÚSCULAS y emojis que detenga el scroll (Ej: "¿ESTAMOS ANTE EL DESPEGUE DE {moneda}?", "🚨 ALERTA DE MOVIMIENTO MASIVO EN {moneda}").
+    2. 📝 FORMATO VISUAL RÁPIDO: NO uses párrafos densos. Usa viñetas con emojis (👉, 💡, ⚠️, 🚀) para que la información técnica sea súper fácil de leer. ¡Usa listas y mucho salto de línea!
+    3. 🧠 FUNDAMENTO SIMPLE: Explica en 1 o 2 viñetas breves QUÉ hace {moneda} o qué narrativa empuja su precio. Convierte el análisis técnico complejo ({instruccion_datos}) en algo simple que un principiante entienda.
+    4. 💬 INTERACCIÓN (CLAVE PARA EL ALGORITMO): Termina SIEMPRE con una pregunta directa y fácil de responder (Ej: "¿Tienes {moneda} en tu portafolio? Los leo 👇").
+    5. 🎁 CRECIMIENTO: Pide explícitamente a los usuarios que le den a "Seguir" para recibir tus alertas tempranas y ganar dinero.
     
     REGLAS:
-    - Extensión recomendada: Entre 400 y 700 caracteres (aprovecha el espacio de Binance Square para aportar valor real).
-    - Incluye al final: ${moneda} $BNB #{moneda}
+    - Extensión recomendada: Entre 500 y 800 caracteres. Textos escaneables.
+    - Incluye al final: @BinanceES ${moneda} $BNB #{moneda} #Binance #CryptoMarket
     """
     
     return generar_texto_ia(prompt)
@@ -349,21 +348,16 @@ def generar_post_fng(datos_fng):
     OBJETIVO: Post diario de sentimiento de mercado (Viral).
     
     ESTILO:
-    - Emojis al inicio.
-    - Párrafos cortos.
-    - Tono: Experto pero cercano.
-    
-    INSTRUCCIONES ANTI-REPETICIÓN Y ENGAGEMENT:
-    - 🔄 TÍTULO DINÁMICO: No uses siempre el mismo título. Inventa titulares variados basados en el sentimiento actual ({clasificacion}).
-    - 📊 EL DATO: Menciona que estamos en {valor}/100 de forma natural en el texto.
-    - 🧠 ANÁLISIS: Haz una interpretación psicológica de lo que esto significa para los inversores HOY. Varía el enfoque (ballenas, pánico retail, etc.).
-    - 🎁 CTA PARA SEGUIDORES: Varía el llamado a la acción. Pide estratégicamente que te sigan usando diferentes motivaciones (ej: "Sígueme para navegar la volatilidad juntos").
-    - 👇 CIERRE: Haz una pregunta distinta cada día. No repitas siempre "¿Compras o vendes?".
+    - 🪝 TITULAR VIRAL: Relaciona el sentimiento con la acción de las ballenas en mayúsculas (Ej: "🐳 ¿QUÉ ESTÁN HACIENDO LAS BALLENAS HOY?").
+    - 📊 EL DATO CLAVE: Destaca que estamos en {valor}/100 ({clasificacion}) usando una viñeta clara.
+    - 🧠 PSICOLOGÍA DEL MERCADO: Explica en una o dos líneas qué significa esto para el inversor común (Ej: "El miedo extremo es donde se hacen las fortunas" o "Codicia extrema = cuidado con las correcciones").
+    - 💬 PREGUNTA A LA COMUNIDAD: Invita a comentar: "¿Tú estás comprando, vendiendo o holdeando? Te leo en los comentarios 👇".
+    - ➕ FOLLOW: "Dale a SEGUIR para tu actualización diaria del mercado."
     
     REGLAS:
-    - 🚫 Prohibido usar formato de listas (1. 2.).
-    - Extensión: Unos 300 - 450 caracteres.
-    - OBLIGATORIO: Hashtags #Bitcoin #FearAndGreed
+    - Muy visual, usa emojis y espacios. Párrafos cortísimos.
+    - Extensión: Unos 350 - 500 caracteres.
+    - OBLIGATORIO: Hashtags #Bitcoin #FearAndGreed #Binance
     """
     
     return generar_texto_ia(prompt)
@@ -461,25 +455,46 @@ def generar_post_rsi(datos):
         hashtag = "#TakeProfit"
 
     prompt = f"""
-    Actúa como un trader veterano de Binance Square.
+    Actúa como un Top Trader de Binance Square que da las mejores "señales" y análisis en tiempo real.
     DATOS: {moneda} está en zona de {estado} en gráfico de 1h. Precio: {precio}. {contexto_fomo}
     
     OBJETIVO: Crear una {objetivo} que suene ÚNICA y humana.
     
-    INSTRUCCIONES ANTI-REPETICIÓN Y ENGAGEMENT:
-    - 🔄 Varía el gancho inicial (a veces usa 'Atención', otras veces una pregunta directa, otras una observación técnica).
-    - 🧠 ANÁLISIS Y FUNDAMENTOS: Acompaña el dato técnico ({explicacion_rsi}) con información real del token {moneda}. Menciona su sector (Ej: DeFi, IA, Memecoin), alguna noticia reciente o por qué atrae liquidez. Dales un motivo fundamental para comprar o vender, no solo el indicador.
-    - 🚫 CERO REPETICIÓN: NO uses frases hechas como "el fomo está en llamas" o "históricamente...". Interpreta los datos de forma madura.
-    - 🎁 CTA PARA CONVERSIÓN: Las señales tempranas valen dinero. Usa gatillos psicológicos para pedir que "Te Sigan" si quieren adelantarse al mercado.
-    - 🚫 NUNCA repitas el mismo cierre.
-    - 🚫 NO uses listas enumeradas. Escribe en párrafos cortos y fluidos.
+    ESTILO DE CREADOR EXITOSO (ALTO ALCANCE):
+    1. 🪝 TITULAR DE IMPACTO: Empieza con mayúsculas y emojis de alerta máxima (Ej: "🚨 ¡CUIDADO CON {moneda}!" o "🚀 SEÑAL DE OPORTUNIDAD EN {moneda}").
+    2. 📝 ESCANEO RÁPIDO: Usa viñetas o checkmarks (✅, ❌, 📊) para explicar de forma sencilla por qué {explicacion_rsi}.
+    3. 🧠 FUNDAMENTO: Menciona brevemente el sector del token para justificar el movimiento, pero mantén el enfoque en la acción del precio.
+    4. 💥 ENGAGEMENT: Haz una pregunta polémica o muy directa (Ej: "¿Compras el dip o esperas más caída? 👇").
+    5. 🚀 FOLLOW URGE: "Dale click en SEGUIR para no perderte mi próxima alerta en tiempo real."
     
     REGLAS:
-    - Extensión recomendada: Entre 450 y 700 caracteres.
-    - OBLIGATORIO: Cashtags ${moneda} {hashtag} #Binance
+    - Formato visual escaneable (espacios en blanco, no bloques de texto de más de 2 líneas juntas).
+    - OBLIGATORIO: Cashtags ${moneda} {hashtag} #Binance #CryptoMarket
     """
     
     return generar_texto_ia(prompt)
+
+def generar_imagen_crypto(moneda, sentimiento="bullish", filename="crypto_post.jpg"):
+    """Genera una imagen 3D atractiva de la criptomoneda usando Pollinations.ai"""
+    print(f"🎨 Generando imagen visual para {moneda} ({sentimiento})...")
+    
+    adjetivo = "rocket taking off, bullish, glowing green neon lights" if sentimiento == "bullish" else "bear market, warning red neon lights, dramatic shadows"
+    prompt = f"3D render of {moneda} cryptocurrency physical coin, {adjetivo}, photorealistic, 8k resolution, cinematic lighting, trading background"
+    encoded_prompt = urllib.parse.quote(prompt)
+    
+    seed = random.randint(1, 1000000)
+    image_url = f"https://image.pollinations.ai/prompt/{encoded_prompt}?width=1024&height=1024&nologo=true&seed={seed}&model=flux"
+    
+    try:
+        response = sesion_http.get(image_url, timeout=30)
+        response.raise_for_status()
+        with open(filename, 'wb') as f:
+            f.write(response.content)
+        print(f"✅ Imagen generada y guardada como {filename}")
+        return filename
+    except Exception as e:
+        print(f"⚠️ Error generando imagen con IA: {e}")
+        return None
 
 if __name__ == "__main__":
     print("🤖 Iniciando Bot vIcmAr...")
@@ -522,13 +537,22 @@ if __name__ == "__main__":
             # Generamos Post Corto para Square (usamos la lógica inteligente general o RSI si es extremo)
             if oportunidad['rsi'] <= 30 or oportunidad['rsi'] >= 70:
                 post_square = generar_post_rsi(oportunidad)
+                sentimiento = "bullish" if oportunidad['rsi'] <= 30 else "bearish"
             else:
                 post_square = generar_post_inteligente(oportunidad)
+                sentimiento = "bullish" if float(oportunidad['percent']) > 0 else "bearish"
+                
+            # Generar imagen atractiva
+            imagen_path = generar_imagen_crypto(oportunidad['symbol'], sentimiento)
             
-            # Publicar en Square
-            if post_square and publicar_en_square(post_square):
+            # Publicar en Square (AQUÍ PASAMOS LA IMAGEN A LA FUNCIÓN)
+            if post_square and publicar_en_square(post_square, image_path=imagen_path):
                 print(f"✅ Publicado en Square.")
                 guardar_historial(oportunidad['symbol'])
 
                 # Notificación simple a Telegram sobre la publicación en Square
                 enviar_telegram(f"✅ Publicado nuevo análisis de {oportunidad['symbol']} en Binance Square.")
+                
+                # Limpieza del archivo temporal
+                if imagen_path and os.path.exists(imagen_path):
+                    os.remove(imagen_path)
