@@ -18,9 +18,6 @@ if not GROQ_API_KEY:
     raise ValueError("❌ Error: La variable GROQ_API_KEY no está configurada.")
 if not MODO_PRUEBA and not SQUARE_API_KEY:
     raise ValueError("❌ Error: SQUARE_API_KEY es necesaria para publicar en Binance (MODO_PRUEBA=False). Revisa tus Secretos en GitHub.")
-if not MODO_PRUEBA and SQUARE_API_KEY:
-    print(f"🔑 SQUARE_API_KEY cargada correctamente (Longitud: {len(SQUARE_API_KEY)})")
-
 client = Groq(api_key=GROQ_API_KEY)
 
 # --- CONFIGURACIÓN DE RED AVANZADA ---
