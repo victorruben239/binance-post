@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:      # Permisos necesarios para guardar el historial en el repo
       contents: write
     steps:
